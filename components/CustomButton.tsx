@@ -1,7 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, ViewStyle } from "react-native";
 
-export const CustomButton = ({styleProp} : StyleSheet.NamedStyles<any>) => {
+type Props = {
+  styleProp: ViewStyle;
+};
+
+export const CustomButton = ({ styleProp }: Props) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
