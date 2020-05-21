@@ -8,23 +8,26 @@ type Props = {
 };
 
 export const CustomButton = ({ styleProp, text, onPress }: Props) => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      margin: 5,
-      borderRadius: 20,
-      ...styleProp,
-    },
-    text: {
-      justifyContent: "center",
-      fontSize: 20,
-    },
-  });
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity
+      style={[styles.container, styleProp]}
+      onPress={onPress}
+    >
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    margin: 5,
+    borderRadius: 20,
+  },
+  text: {
+    justifyContent: "center",
+    fontSize: 20,
+  },
+});

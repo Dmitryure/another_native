@@ -1,3 +1,4 @@
 export enum EScreens {
-   Home = "home"
+   Home = "home",
+   ListScreen = "ListScreen"
 }

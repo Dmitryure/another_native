@@ -1,18 +1,16 @@
 import React from "react";
 import { NavigationScreenConfigProps } from "react-navigation";
-import {
-  Dimensions,
-  Image,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import { CustomButton } from "../components/CustomButton";
 
 import colors from "../config/config";
+import { EScreens } from "../entities";
 
 const HomeScreen = ({ navigation }: NavigationScreenConfigProps<any>) => {
+  const navigateToPage = (page: EScreens) => {
+    navigation.navigate(page);
+  };
+
   return (
     <>
       <View style={styles.container}>
@@ -29,12 +27,12 @@ const HomeScreen = ({ navigation }: NavigationScreenConfigProps<any>) => {
           <CustomButton
             styleProp={{ backgroundColor: colors.palePink }}
             text="Login"
-            onPress={() => console.log("login")}
+            onPress={() => navigateToPage(EScreens.ListScreen)}
           />
           <CustomButton
             styleProp={{ backgroundColor: colors.paleGreen }}
             text="Register"
-            onPress={() => console.log("register")}
+            onPress={() => navigateToPage(EScreens.ListScreen)}
           />
         </View>
       </View>
