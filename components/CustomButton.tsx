@@ -1,12 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from "react-native";
+import { StyleSheet, Text, ViewStyle, TouchableOpacity } from "react-native";
 
 type Props = {
   styleProp: ViewStyle;
   text: string;
+  onPress: Function;
 };
 
-export const CustomButton = ({ styleProp, text }: Props) => {
+export const CustomButton = ({ styleProp, text, onPress }: Props) => {
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -22,8 +23,8 @@ export const CustomButton = ({ styleProp, text }: Props) => {
     },
   });
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={onPress}>
       <Text style={styles.text}>{text}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };

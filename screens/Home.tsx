@@ -29,10 +29,12 @@ const HomeScreen = ({ navigation }: NavigationScreenConfigProps<any>) => {
           <CustomButton
             styleProp={{ backgroundColor: colors.palePink }}
             text="Login"
+            onPress={() => console.log("login")}
           />
           <CustomButton
             styleProp={{ backgroundColor: colors.paleGreen }}
             text="Register"
+            onPress={() => console.log("register")}
           />
         </View>
       </View>
