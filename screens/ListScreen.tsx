@@ -5,15 +5,15 @@ import Product from "../components/Product";
 import { SafeScreen } from "../components/SafeScreen";
 
 const ListScreen = () => {
-  console.log(StatusBar.currentHeight);
   return (
     <SafeScreen>
       <FlatList
         data={mockProducts}
         renderItem={({ item }) => {
-          const { price, img, title, description } = item;
+          const { price, img, title, description, id } = item;
           return (
             <Product
+              key={id}
               price={price}
               description={description}
               img={img}

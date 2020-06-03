@@ -3,7 +3,7 @@ import { NavigationScreenConfigProps } from "react-navigation";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { CustomButton } from "../components/CustomButton";
 
-import colors from "../config/config";
+import colors from "../config/colors";
 import { EScreens } from "../entities";
 
 const HomeScreen = ({ navigation }: NavigationScreenConfigProps<any>) => {
